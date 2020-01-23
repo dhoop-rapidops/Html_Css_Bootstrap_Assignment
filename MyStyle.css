@@ -1,6 +1,12 @@
 
 /* header */
 
+.sticky-header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .logo h3{
     font-weight: 500;
     margin-left: 10px;
@@ -45,6 +51,7 @@
     width: 170px;
     display: none;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .innerLinks a{
@@ -89,10 +96,113 @@
     margin: 10px 0px; 
 }
 
-/* footer */
+/* showcase */
+
+.showcase{
+    margin: 50px 0px;
+}
+
+
+/* Images section */
+
+.flex-image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+}
+
+.pf-image {
+    position: relative;
+    margin: 10px 0px;
+}
+
+.pf-image img{
+    width: 345px;
+    height: 240px;
+}
+.img-hover{
+    position: absolute;
+    top:0;bottom: 0;left: 0;right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00a5f4;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.pf-image:hover .img-hover{
+    opacity: 0.8;
+}
+
+
+/* Form section */
+
+.feedback-form{
+    margin-top: 50px;
+    background-image: url(assets/form-background.jpeg);
+    height: 670px;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+.form-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.form-overlay h1{
+    letter-spacing: 1.5px;
+    margin-top: 70px;
+}
+
+.form-section{
+    margin-top: 50px !important;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-control{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    padding: 25px !important;
+    color: white !important;
+    margin: 20px 0px !important;
+}
+
+.form-group textarea{
+    height: 160px !important;
+}
+
+.form-check-label{
+    color: #ddd !important;
+}
+
+button[type="submit"]{
+    border: 1px solid #ddd;
+    padding: 10px 10px;
+    width: 150px;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover{
+    border-color: rgba(70, 137, 210, 0.8);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(70, 137, 210, 0.8);
+}
+
+
+/* Fotter section */
 
 .myfooter{
-    margin: 20px 0px;
+    width: 100%;
+}
+
+.social-media-links img{
+    width: 50px;
+    height: 50px;
 }
 
 /* Media Query */
@@ -105,7 +215,7 @@
         float: left;
     }
     .flex-container{
-        width: 600px;
+        width: 400px;
     }
     .align{
         justify-content: flex-start;
